@@ -60,7 +60,19 @@ export class Person extends Entity {
       errorMessage: 'A observação deve ter, no máximo, 300 caracteres.',
     }
   })
-  comments: string;
+  comments?: string;
+
+  @property({
+    type: 'date',
+    default: () => new Date()
+  })
+  createdAt? : string;
+  
+  @property({
+    type: 'date',
+    default: () => new Date()
+  })
+  updatedAt? : string;
 
   @belongsTo(() => Occupation)
   occupationId: number;

@@ -16,6 +16,18 @@ export class Occupation extends Entity {
   })
   name: string;
 
+  @property({
+    type: 'date',
+    default: () => new Date()
+  })
+  createdAt? : string;
+  
+  @property({
+    type: 'date',
+    default: () => new Date()
+  })
+  updatedAt? : string;
+
   @hasMany(() => Person)
   people: Person[];
   // Define well-known properties here
