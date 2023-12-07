@@ -1,4 +1,4 @@
-# api-patient
+# API Patient
 
 This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
 [initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
@@ -20,6 +20,15 @@ npm ci
 
 ## Run the application
 
+Before running the application, create a `.env` file in the project root and insert the information below, changing the database name and password
+
+```env
+DB_URL='postgres://<YOUR_DB_USERNAME>:<YOUR_DB_PASSWORD>@localhost/apiPatient'
+DB_USERNAME='<YOUR_DB_USERNAME>'
+DB_PASSWORD='<YOUR_DB_PASSWORD>'
+```
+After creating the env, run:
+
 ```sh
 npm start
 ```
@@ -27,6 +36,12 @@ npm start
 You can also run `node .` to skip the build step.
 
 Open http://127.0.0.1:3000 in your browser.
+
+## Api Documentation
+
+To see the routes, entities and test your Api's endpoints
+
+Open http://127.0.0.1:3000/explorer/
 
 ## Rebuild the project
 

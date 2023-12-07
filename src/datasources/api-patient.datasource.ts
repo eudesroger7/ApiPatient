@@ -4,11 +4,11 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'apiPatient',
   connector: 'postgresql',
-  url: 'postgres://postgres:12345678@localhost/apiPatient',
+  url: (process.env.DB_URL || ''),
   host: 'localhost',
   port: 5432,
-  user: 'postgres',
-  password: '12345678',
+  user: (process.env.DB_USERNAME || ''),
+  password: (process.env.DB_PASSWORD || ''),
   database: 'apiPatient'
 };
 

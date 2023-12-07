@@ -1,6 +1,9 @@
 import {ApplicationConfig, ApiPatientApplication} from './application';
+const dotenv = require('dotenv');
 
 export * from './application';
+
+dotenv.config();
 
 export async function main(options: ApplicationConfig = {}) {
   const app = new ApiPatientApplication(options);
